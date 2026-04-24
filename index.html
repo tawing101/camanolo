@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camanolo Homestay | General Luna, Siargao</title>
-    <meta name="description" content="Your minimalist island basecamp in General Luna. Native aesthetics, modern comforts, Starlink Wi-Fi, and a central location near Tourism Road.">
+    <meta name="description" content="A family home in General Luna—unhurried, rooted, where the locals are neighbors and the island wraps around you.">
     
-    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts for clean typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -41,7 +39,6 @@
         }
     </script>
     <style>
-        /* Custom styles for the hero background using the real exterior photo from the images folder */
         .hero-bg {
             background-image: linear-gradient(rgba(58, 83, 56, 0.4), rgba(74, 69, 62, 0.6)), url('images/507280845.jpg');
             background-size: cover;
@@ -55,57 +52,89 @@
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-sand-100 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Precision Geometric SVG Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="block text-tropical-900 hover:text-tropical-500 transition-colors pt-2">
                         <svg viewBox="0 0 350 100" xmlns="http://www.w3.org/2000/svg" class="h-10 md:h-12 w-auto">
                             <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <!-- c -->
                                 <path d="M 42 50 A 12 12 0 1 0 42 66" stroke-width="4"/>
-                                <!-- a -->
                                 <circle cx="65" cy="58" r="12" stroke-width="4"/>
                                 <path d="M 77 46 L 77 70" stroke-width="4"/>
-                                <!-- m -->
                                 <path d="M 95 70 L 95 57 A 11 11 0 0 1 117 57 L 117 70 M 117 57 A 11 11 0 0 1 139 57 L 139 70" stroke-width="4"/>
                                 <circle cx="106" cy="28" r="3.5" stroke-width="3.5"/>
                                 <circle cx="128" cy="28" r="3.5" stroke-width="3.5"/>
-                                <!-- Kubo A -->
                                 <path d="M 152 52 L 175 32 L 198 52" stroke-width="5"/>
                                 <path d="M 158 48 L 153 70 M 192 48 L 197 70" stroke-width="5"/>
                                 <path d="M 156 60 L 194 60" stroke-width="4"/>
-                                <!-- Palm Tree -->
                                 <path d="M 183 40 Q 188 30 188 18" stroke-width="2.5"/>
                                 <path d="M 188 18 Q 175 16 172 23" stroke-width="1.5"/>
                                 <path d="M 188 18 Q 178 8 180 5" stroke-width="1.5"/>
                                 <path d="M 188 18 Q 192 4 198 6" stroke-width="1.5"/>
                                 <path d="M 188 18 Q 200 12 205 20" stroke-width="1.5"/>
                                 <path d="M 188 18 Q 198 25 194 30" stroke-width="1.5"/>
-                                <!-- n -->
                                 <path d="M 215 70 L 215 57 A 11 11 0 0 1 237 57 L 237 70" stroke-width="4"/>
                                 <circle cx="226" cy="28" r="3.5" stroke-width="3.5"/>
-                                <!-- o -->
                                 <circle cx="260" cy="58" r="12" stroke-width="4"/>
-                                <!-- l -->
                                 <path d="M 285 30 L 285 70" stroke-width="4"/>
-                                <!-- o -->
                                 <circle cx="310" cy="58" r="12" stroke-width="4"/>
                             </g>
-                            <!-- Subtext -->
                             <text x="175" y="94" font-family="Inter, sans-serif" font-weight="400" font-size="12" letter-spacing="0.5em" text-anchor="middle" fill="currentColor" stroke="none">HOMESTAY</text>
                         </svg>
                     </a>
                 </div>
                 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-sand-800 hover:text-tropical-500 transition-colors">The Vibe</a>
-                    <a href="#amenities" class="text-sand-800 hover:text-tropical-500 transition-colors">Amenities</a>
-                    <a href="#location" class="text-sand-800 hover:text-tropical-500 transition-colors">Location</a>
-                    <a href="#guide" class="text-sand-800 hover:text-tropical-500 transition-colors">Local Guide</a>
-                    <a href="#contact" class="bg-tropical-800 text-white px-6 py-2 rounded-full font-medium hover:bg-tropical-900 transition-colors shadow-md">Book Now</a>
+                <!-- Desktop Menu with Dropdowns -->
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center text-sm lg:text-base">
+                    
+                    <!-- Our Story -->
+                    <div class="relative group">
+                        <button class="text-sand-800 hover:text-tropical-500 transition-colors flex items-center py-2">
+                            Our Story
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+                            <a href="#reviews" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors">Reviews</a>
+                            <a href="#accomplishments" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors border-t border-sand-50">Accomplishments</a>
+                        </div>
+                    </div>
+
+                    <!-- The Nipa Villas -->
+                    <div class="relative group">
+                        <button class="text-sand-800 hover:text-tropical-500 transition-colors flex items-center py-2">
+                            The Nipa Villas
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-56 bg-white border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+                            <a href="#queen-kubo" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors">Queen bahay kubo</a>
+                            <a href="#aframe-villa" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors border-t border-sand-50">Aframe Villa</a>
+                        </div>
+                    </div>
+
+                    <!-- The Residence -->
+                    <div class="relative group">
+                        <button class="text-sand-800 hover:text-tropical-500 transition-colors flex items-center py-2">
+                            The Residence
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+                            <a href="#curated-details" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors">Curated Details</a>
+                            <a href="#private-dining" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors border-t border-sand-50">Private Dining</a>
+                            <a href="#butler-service" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors border-t border-sand-50">Butler Service</a>
+                        </div>
+                    </div>
+
+                    <!-- Camanolo Experience -->
+                    <div class="relative group">
+                        <button class="text-sand-800 hover:text-tropical-500 transition-colors flex items-center py-2">
+                            Camanolo Experience
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute right-0 mt-0 w-48 bg-white border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+                            <a href="#basic-details" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors">Basic Details</a>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-sand-800 hover:text-tropical-800 focus:outline-none p-2">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,263 +145,372 @@
             </div>
         </div>
         
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-sand-100">
-            <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
-                <a href="#about" class="block px-3 py-3 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">The Vibe</a>
-                <a href="#amenities" class="block px-3 py-3 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Amenities</a>
-                <a href="#location" class="block px-3 py-3 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Location</a>
-                <a href="#guide" class="block px-3 py-3 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Local Guide</a>
-                <a href="#contact" class="block mt-4 text-center bg-tropical-800 text-white px-3 py-3 rounded-md font-medium hover:bg-tropical-900 transition-colors">Book Now</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-sand-100 max-h-[80vh] overflow-y-auto">
+            <div class="px-4 pt-4 pb-6 space-y-6 shadow-lg">
+                <!-- Mobile: Our Story -->
+                <div>
+                    <h3 class="px-3 text-xs font-bold text-sand-400 uppercase tracking-wider mb-2">Our Story</h3>
+                    <div class="space-y-1">
+                        <a href="#reviews" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Reviews</a>
+                        <a href="#accomplishments" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Accomplishments</a>
+                    </div>
+                </div>
+                <!-- Mobile: The Nipa Villas -->
+                <div>
+                    <h3 class="px-3 text-xs font-bold text-sand-400 uppercase tracking-wider mb-2">The Nipa Villas</h3>
+                    <div class="space-y-1">
+                        <a href="#queen-kubo" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Queen bahay kubo</a>
+                        <a href="#aframe-villa" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Aframe Villa</a>
+                    </div>
+                </div>
+                <!-- Mobile: The Residence -->
+                <div>
+                    <h3 class="px-3 text-xs font-bold text-sand-400 uppercase tracking-wider mb-2">The Residence</h3>
+                    <div class="space-y-1">
+                        <a href="#curated-details" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Curated Details</a>
+                        <a href="#private-dining" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Private Dining</a>
+                        <a href="#butler-service" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Butler Service</a>
+                    </div>
+                </div>
+                <!-- Mobile: Camanolo Experience -->
+                <div>
+                    <h3 class="px-3 text-xs font-bold text-sand-400 uppercase tracking-wider mb-2">Camanolo Experience</h3>
+                    <div class="space-y-1">
+                        <a href="#basic-details" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Basic Details</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <section id="home" class="relative h-screen flex items-center justify-center hero-bg">
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
             <span class="inline-block py-1 px-3 rounded-full bg-white/20 text-white text-sm tracking-wider font-semibold uppercase mb-6 backdrop-blur-sm border border-white/30">General Luna, Siargao</span>
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
                 Your Minimalist <br/> Island Basecamp
             </h1>
-            <p class="text-lg md:text-2xl text-sand-50 mb-10 font-light drop-shadow-md max-w-2xl mx-auto">
-                Experience authentic Bahay Kubo aesthetics without sacrificing modern comforts like fast Starlink Wi-Fi and cold AC.
+            <p class="text-lg md:text-2xl text-sand-50 mb-10 font-light drop-shadow-md max-w-3xl mx-auto leading-relaxed">
+                Authentic island aesthetics without sacrificing modern comforts like fast Starlink Wi-Fi and cold AC.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-tropical-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-tropical-600 transition-all shadow-xl hover:-translate-y-1">
-                    Check Availability
-                </a>
-                <a href="#about" class="bg-white/10 backdrop-blur-sm border border-white/50 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
-                    Explore the Space
-                </a>
-            </div>
         </div>
-        
-        <!-- Scroll Down Indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#about" class="text-white/70 hover:text-white">
+            <a href="#our-story" class="text-white/70 hover:text-white">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="lg:w-1/2">
-                    <!-- Updated path to the images folder -->
-                    <img src="images/507282598.jpg" alt="Minimalist Room" class="rounded-2xl shadow-2xl object-cover h-[500px] w-full" onerror="this.src='https://placehold.co/800x500/e2e8f0/475569?text=Camanolo+Homestay'">
-                </div>
-                <div class="lg:w-1/2 space-y-6">
-                    <h2 class="text-tropical-800 font-semibold tracking-wider uppercase text-sm">The Experience</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold text-sand-900">Functional comfort in the heart of the island.</h3>
-                    <p class="text-lg text-sand-800 leading-relaxed">
-                        At Camanolo Homestay, we've stripped away the unnecessary to focus entirely on what matters most for a perfect Siargao trip: reliable rest, security, and strong connectivity.
-                    </p>
-                    <p class="text-lg text-sand-800 leading-relaxed">
-                        Designed with native-inspired touches, our rooms serve as your quiet sanctuary after a long day of surfing or exploring. We bridge the gap between a basic hostel and a high-end resort, offering exceptional value right where the action is.
-                    </p>
-                    
-                    <div class="pt-6 grid grid-cols-2 gap-6">
-                        <div class="border-l-4 border-tropical-500 pl-4">
-                            <p class="font-bold text-2xl text-sand-900">100%</p>
-                            <p class="text-sm text-sand-800">Clean & Secure</p>
-                        </div>
-                        <div class="border-l-4 border-tropical-500 pl-4">
-                            <p class="font-bold text-2xl text-sand-900">200+ Mbps</p>
-                            <p class="text-sm text-sand-800">Starlink Internet</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Amenities Section -->
-    <section id="amenities" class="py-24 bg-sand-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-tropical-800 font-semibold tracking-wider uppercase text-sm mb-2">Everything You Need</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-sand-900">High-Functioning Basics</h3>
-            </div>
+    <!-- SECTION 1: OUR STORY -->
+    <section id="our-story" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-tropical-800 font-semibold tracking-wider uppercase text-sm mb-4">Our Story</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-sand-900 mb-6">A Home That Became a Place to Stay</h3>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Amenity 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-sand-100">
-                    <div class="w-14 h-14 bg-tropical-50 rounded-xl flex items-center justify-center mb-6 text-tropical-600">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-sand-900 mb-3">Starlink Wi-Fi</h4>
-                    <p class="text-sand-800">Perfect for digital nomads. Reliable, high-speed internet in your room and the garden patios.</p>
-                </div>
-
-                <!-- Amenity 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-sand-100">
-                    <div class="w-14 h-14 bg-tropical-50 rounded-xl flex items-center justify-center mb-6 text-tropical-600">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-sand-900 mb-3">Strong AC</h4>
-                    <p class="text-sand-800">Escape the tropical heat. Each room features powerful air conditioning for a comfortable sleep.</p>
-                </div>
-
-                <!-- Amenity 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-sand-100">
-                    <div class="w-14 h-14 bg-tropical-50 rounded-xl flex items-center justify-center mb-6 text-tropical-600">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-sand-900 mb-3">Communal Kitchen</h4>
-                    <p class="text-sand-800">Save on dining out. Our fully equipped shared kitchen allows you to prepare your own meals easily.</p>
-                </div>
-
-                <!-- Amenity 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-sand-100">
-                    <div class="w-14 h-14 bg-tropical-50 rounded-xl flex items-center justify-center mb-6 text-tropical-600">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-sand-900 mb-3">Work-Ready</h4>
-                    <p class="text-sand-800">Dedicated room desks and quiet garden spaces make balancing remote work and island life effortless.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location Section -->
-    <section id="location" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col-reverse lg:flex-row items-center gap-16">
-                <div class="lg:w-1/2 space-y-6">
-                    <h2 class="text-tropical-800 font-semibold tracking-wider uppercase text-sm">Strategic Location</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold text-sand-900">Maximum Geographic Efficiency</h3>
-                    <p class="text-lg text-sand-800 leading-relaxed">
-                        Tucked slightly back from the main road with a beautiful garden buffer, we offer a peaceful night's rest away from the heavy street noise.
-                    </p>
-                    <p class="text-lg text-sand-800 leading-relaxed mb-6">
-                        Yet, you are exceptionally close to the action. We are located just off the Dapa-General Luna Road, eliminating the need for constant tricycle rides.
-                    </p>
-                    
-                    <ul class="space-y-4 text-sand-800 font-medium">
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-tropical-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            1-5 minute walk to Tourism Road
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-tropical-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            Walking distance to Kermit & Bravo
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-tropical-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            Short walk to nearest beach access
-                        </li>
-                    </ul>
-                </div>
-                <div class="lg:w-1/2 w-full">
-                    <!-- Placeholder map image using standard Unsplash or placeholder -->
-                    <div class="bg-sand-100 rounded-2xl overflow-hidden shadow-lg h-[400px] flex items-center justify-center relative">
-                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Siargao Map Area" class="absolute inset-0 w-full h-full object-cover opacity-80" onerror="this.style.display='none'">
-                        <div class="relative z-10 bg-white/90 backdrop-blur-sm p-6 rounded-xl text-center shadow-xl border border-sand-200">
-                            <svg class="w-12 h-12 text-tropical-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
-                            <h4 class="font-bold text-sand-900 text-lg">General Luna, Siargao</h4>
-                            <p class="text-sm text-sand-800 mt-1">Right off Dapa-GL Road</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Curated Guide Section -->
-    <section id="guide" class="py-24 bg-sand-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-tropical-800 font-semibold tracking-wider uppercase text-sm mb-2">Suroyiao Integration</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-sand-900">Our Curated Neighborhood</h3>
-                <p class="text-lg text-sand-800 mt-4">We are within walking distance of some of the best spots in General Luna. Here is where we love to eat, surf, and chill.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Guide Item 1 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-sand-100 group">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cafe vibe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-xl font-bold text-sand-900">Huni Siargao</h4>
-                            <span class="bg-tropical-100 text-tropical-800 text-xs px-2 py-1 rounded font-semibold">Dine & Chill</span>
-                        </div>
-                        <p class="text-sand-800 text-sm mb-4">A beautiful tropical spot dedicated to slow food and honest flavors. Experience an aesthetic island dining experience deeply rooted in nature.</p>
-                        <p class="text-xs text-sand-500 font-medium uppercase tracking-wider">★ Top Pick</p>
-                    </div>
-                </div>
-
-                <!-- Guide Item 2 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-sand-100 group">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Restaurant vibe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-xl font-bold text-sand-900">Kurvada</h4>
-                            <span class="bg-tropical-100 text-tropical-800 text-xs px-2 py-1 rounded font-semibold">Eat</span>
-                        </div>
-                        <p class="text-sand-800 text-sm mb-4">The best affordable, home-style island food. Perfect for a hearty lunch just a 2-minute walk away.</p>
-                        <p class="text-xs text-sand-500 font-medium uppercase tracking-wider">★ Local Favorite</p>
-                    </div>
-                </div>
-
-                <!-- Guide Item 3 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-sand-100 group">
-                    <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-xl font-bold text-sand-900">Kermit Siargao</h4>
-                            <span class="bg-tropical-100 text-tropical-800 text-xs px-2 py-1 rounded font-semibold">Dine & Chill</span>
-                        </div>
-                        <p class="text-sand-800 text-sm mb-4">Legendary wood-fired pizza and great evening cocktails. Only a 5-minute stroll from your room.</p>
-                        <p class="text-xs text-sand-500 font-medium uppercase tracking-wider">★ Must Try</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-12 text-center">
-                <a href="#" onclick="alert('This will soon link to Suroyiao.com for the full Siargao guide!')" class="inline-flex items-center text-tropical-800 font-bold hover:text-tropical-600 transition-colors">
-                    See our full Suroyiao Guide
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action / Contact -->
-    <section id="contact" class="py-20 bg-tropical-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready for your Siargao trip?</h2>
-            <p class="text-tropical-100 text-lg mb-10 max-w-2xl mx-auto">
-                Secure your spot at Camanolo Homestay. Send us a message to check availability or ask about our local tips and scooter rentals.
+            <p class="text-xl text-sand-800 leading-relaxed mb-6 font-medium">
+                A family home in General Luna—unhurried, rooted, where the locals are neighbors and the island wraps around you.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:hello@camanolo.com" class="bg-white text-tropical-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-tropical-50 transition-colors shadow-lg flex items-center justify-center">
+            <p class="text-lg text-sand-700 leading-relaxed mb-16">
+                Nestled in a quiet alley off the Dapa-General Luna Road, Camanolo Homestay offers a peaceful retreat right in the heart of General Luna. While the neighborhood bustles with the energy of locals and stray dogs—adding to the authentic island vibe—our space provides a quiet and relaxing escape from the main road's noise.
+            </p>
+
+            <!-- Reviews -->
+            <div id="reviews" class="scroll-mt-24 mb-16">
+                <h4 class="text-xl font-bold text-sand-900 mb-8 border-b border-sand-100 pb-2 text-left">Reviews</h4>
+                <div class="grid md:grid-cols-2 gap-6 text-left">
+                    <div class="bg-sand-50 p-6 rounded-2xl border border-sand-100">
+                        <div class="flex text-tropical-500 mb-3">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                        <p class="text-sand-800 italic mb-4">"The perfect island escape! Quiet but central. The Wi-Fi is blazing fast and the beds are so comfortable."</p>
+                        <p class="text-sm font-bold text-sand-900">- Sarah T.</p>
+                    </div>
+                    <div class="bg-sand-50 p-6 rounded-2xl border border-sand-100">
+                        <div class="flex text-tropical-500 mb-3">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                        <p class="text-sand-800 italic mb-4">"A beautiful blend of native design and modern comfort. Felt incredibly secure and welcomed by the hosts."</p>
+                        <p class="text-sm font-bold text-sand-900">- Mark D.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accomplishments -->
+            <div id="accomplishments" class="scroll-mt-24 text-left">
+                <h4 class="text-xl font-bold text-sand-900 mb-6 border-b border-sand-100 pb-2">Accomplishments</h4>
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-tropical-50 border border-tropical-100 px-6 py-3 rounded-full flex items-center">
+                        <svg class="w-5 h-5 text-tropical-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                        <span class="font-medium text-tropical-900">Highly Rated Host</span>
+                    </div>
+                    <div class="bg-tropical-50 border border-tropical-100 px-6 py-3 rounded-full flex items-center">
+                        <svg class="w-5 h-5 text-tropical-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span class="font-medium text-tropical-900">Exceptional Location</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE NIPA VILLAS -->
+    <section id="nipa-villas" class="py-24 bg-sand-50 border-t border-sand-100 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-tropical-800 font-semibold tracking-wider uppercase text-sm mb-2">The Spaces</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-sand-900">The Nipa Villas</h3>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Queen Bahay Kubo -->
+                <div id="queen-kubo" class="flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-sand-100 scroll-mt-24">
+                    <div class="md:w-1/2">
+                        <img src="images/507282598.jpg" alt="Queen Bahay Kubo" class="w-full h-full object-cover min-h-[300px]" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Queen+Kubo'">
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <h4 class="text-2xl font-bold text-sand-900 mb-2">Queen Bahay Kubo</h4>
+                        <div class="flex items-baseline mb-6">
+                            <span class="text-3xl font-bold text-tropical-800">₱1,500</span>
+                            <span class="text-sand-500 text-sm ml-2">/ night (Good for 2 pax)</span>
+                        </div>
+                        <p class="text-sand-800 mb-6">Experience authentic native design combined with high-functioning comfort. Our signature room features intricate woven details and a dedicated workspace.</p>
+                        <ul class="text-sm text-sand-800 space-y-2 mb-8 border-t border-sand-100 pt-6">
+                            <li class="flex justify-between"><span>Check-in:</span> <strong class="font-semibold">2:00 PM</strong></li>
+                            <li class="flex justify-between"><span>Check-out:</span> <strong class="font-semibold">11:00 AM</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Aframe Villa (Placeholder for future) -->
+                <div id="aframe-villa" class="flex flex-col md:flex-row-reverse bg-white rounded-3xl overflow-hidden shadow-sm border border-sand-100 scroll-mt-24">
+                    <div class="md:w-1/2">
+                        <img src="images/507280850.jpg" alt="A-Frame Villa" class="w-full h-full object-cover min-h-[300px]" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=A-Frame+Villa'">
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <div class="inline-block bg-tropical-100 text-tropical-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4 w-max">Coming Soon</div>
+                        <h4 class="text-2xl font-bold text-sand-900 mb-4">A-Frame Villa</h4>
+                        <p class="text-sand-800 mb-6">An architectural escape designed for deeper relaxation. The A-Frame blends stunning angles with soft, natural light, offering a truly unique island sleeping experience.</p>
+                        <ul class="text-sm text-sand-600 space-y-2">
+                            <li>• Lofty ceiling design</li>
+                            <li>• Enhanced privacy</li>
+                            <li>• Premium amenities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE RESIDENCE -->
+    <section id="residence" class="py-24 bg-white border-t border-sand-100 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-tropical-800 font-semibold tracking-wider uppercase text-sm mb-2">Beyond the Room</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-sand-900">The Residence</h3>
+            </div>
+
+            <!-- Curated Details -->
+            <div id="curated-details" class="scroll-mt-24 mb-20">
+                <h4 class="text-xl font-bold text-sand-900 mb-8 border-b border-sand-100 pb-2">Curated Details</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-sand-50 p-6 rounded-2xl border border-sand-100">
+                        <div class="w-12 h-12 bg-tropical-50 rounded-xl flex items-center justify-center text-tropical-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path></svg>
+                        </div>
+                        <h5 class="font-bold text-sand-900 mb-1">Starlink Wi-Fi</h5>
+                        <p class="text-sm text-sand-600">High-speed connection for remote work.</p>
+                    </div>
+                    <div class="bg-sand-50 p-6 rounded-2xl border border-sand-100">
+                        <div class="w-12 h-12 bg-tropical-50 rounded-xl flex items-center justify-center text-tropical-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                        </div>
+                        <h5 class="font-bold text-sand-900 mb-1">Climate Control</h5>
+                        <p class="text-sm text-sand-600">Strong AC & hot/cold private showers.</p>
+                    </div>
+                    <div class="bg-sand-50 p-6 rounded-2xl border border-sand-100">
+                        <div class="w-12 h-12 bg-tropical-50 rounded-xl flex items-center justify-center text-tropical-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h5 class="font-bold text-sand-900 mb-1">Secured Parking</h5>
+                        <p class="text-sm text-sand-600">Safe, dedicated space for your motorcycle.</p>
+                    </div>
+                    <div class="bg-sand-50 p-6 rounded-2xl border border-sand-100">
+                        <div class="w-12 h-12 bg-tropical-50 rounded-xl flex items-center justify-center text-tropical-600 mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h5 class="font-bold text-sand-900 mb-1">Garden Lounge</h5>
+                        <p class="text-sm text-sand-600">Quiet buffer areas to relax and unwind.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Private Dining -->
+                <div id="private-dining" class="scroll-mt-24 bg-white p-8 rounded-3xl border border-sand-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-tropical-50 rounded-full flex items-center justify-center text-tropical-600 mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-sand-900 mb-3">Private Dining & Kitchen</h4>
+                        <p class="text-sand-800 leading-relaxed">Prepare your own meals easily with our fully equipped communal kitchen. We provide free drinking water, making it easy to stay hydrated and save on dining out while enjoying the privacy of our grounds.</p>
+                    </div>
+                </div>
+
+                <!-- Butler Service -->
+                <div id="butler-service" class="scroll-mt-24 bg-white p-8 rounded-3xl border border-sand-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-tropical-50 rounded-full flex items-center justify-center text-tropical-600 mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-sand-900 mb-3">Host & Concierge</h4>
+                        <p class="text-sand-800 leading-relaxed">Let us handle the details. From seamless scooter rentals waiting for you upon arrival, to insider tips on the best surf breaks and hidden cafes, our dedicated hosting ensures you experience the best of Siargao effortlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CAMANOLO EXPERIENCE -->
+    <section id="camanolo-experience" class="py-24 bg-sand-50 border-t border-sand-100 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-tropical-800 font-semibold tracking-wider uppercase text-sm mb-2">The Locale</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-sand-900">Camanolo Experience</h3>
+            </div>
+
+            <!-- Basic Details (Location & Guide) -->
+            <div id="basic-details" class="scroll-mt-24">
+                
+                <!-- Location Split -->
+                <div class="flex flex-col lg:flex-row items-center gap-16 mb-20 bg-white p-8 md:p-12 rounded-3xl border border-sand-100">
+                    <div class="lg:w-1/2 space-y-6">
+                        <h4 class="text-2xl font-bold text-sand-900 mb-6">Strategic Location</h4>
+                        <div class="space-y-8">
+                            <div>
+                                <h5 class="font-bold text-sand-900 text-lg flex items-center mb-3">
+                                    <svg class="w-5 h-5 text-tropical-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    2-5 Minutes Walk
+                                </h5>
+                                <ul class="text-sand-800 grid grid-cols-1 sm:grid-cols-2 gap-2 pl-7">
+                                    <li>• Main Tourism Road</li>
+                                    <li>• Sari-sari stores</li>
+                                    <li>• Eateries & Bakeries</li>
+                                    <li>• Cafes (Kurvada, Kermit)</li>
+                                    <li>• Laundry shops</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-sand-900 text-lg flex items-center mb-3">
+                                    <svg class="w-5 h-5 text-tropical-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    5-10 Minutes Ride
+                                </h5>
+                                <ul class="text-sand-800 grid grid-cols-1 sm:grid-cols-2 gap-2 pl-7">
+                                    <li>• Cloud 9 Surfing Area</li>
+                                    <li>• General Luna Market</li>
+                                    <li>• Catangnan Bridge</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                        <div class="bg-sand-100 rounded-2xl overflow-hidden shadow-sm h-[350px] flex items-center justify-center relative border border-sand-200">
+                            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Siargao Map Area" class="absolute inset-0 w-full h-full object-cover opacity-60" onerror="this.style.display='none'">
+                            <div class="relative z-10 bg-white/90 backdrop-blur-sm p-6 rounded-xl text-center shadow-xl border border-sand-200">
+                                <svg class="w-10 h-10 text-tropical-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                                <h4 class="font-bold text-sand-900">General Luna</h4>
+                                <p class="text-sm text-sand-800 mt-1">Right off Dapa-GL Road</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- House Rules Add-on -->
+                <div class="bg-white p-8 md:p-12 rounded-3xl border border-sand-100 mb-20">
+                    <h4 class="text-2xl font-bold text-sand-900 mb-6">Homestay Guidelines</h4>
+                    <div class="grid md:grid-cols-2 gap-x-12 gap-y-4">
+                        <div class="flex items-start">
+                            <span class="text-tropical-500 mr-3 mt-1 font-bold">•</span>
+                            <span class="text-sand-800"><strong>Quiet Hours:</strong> 10:00 PM to 8:00 AM.</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-tropical-500 mr-3 mt-1 font-bold">•</span>
+                            <span class="text-sand-800"><strong>Kitchen:</strong> Clean up after yourself.</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-tropical-500 mr-3 mt-1 font-bold">•</span>
+                            <span class="text-sand-800"><strong>Security:</strong> Always lock doors when leaving.</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-tropical-500 mr-3 mt-1 font-bold">•</span>
+                            <span class="text-sand-800"><strong>Smoking:</strong> No indoor smoking allowed.</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-tropical-500 mr-3 mt-1 font-bold">•</span>
+                            <span class="text-sand-800"><strong>Guests:</strong> Only registered guests stay overnight.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suroyiao Guide -->
+                <h4 class="text-xl font-bold text-sand-900 mb-8 border-b border-sand-200 pb-2 text-center md:text-left">Suroyiao Curated Neighborhood</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-sand-100">
+                        <div class="h-40 overflow-hidden"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cafe vibe" class="w-full h-full object-cover"></div>
+                        <div class="p-5">
+                            <h5 class="text-lg font-bold text-sand-900 mb-1">Huni Siargao</h5>
+                            <p class="text-sand-800 text-sm mb-3">Slow food and honest flavors in a deep tropical setting.</p>
+                            <span class="text-xs font-bold text-tropical-600 bg-tropical-50 px-2 py-1 rounded">Dine & Chill</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-sand-100">
+                        <div class="h-40 overflow-hidden"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Restaurant vibe" class="w-full h-full object-cover"></div>
+                        <div class="p-5">
+                            <h5 class="text-lg font-bold text-sand-900 mb-1">Kurvada</h5>
+                            <p class="text-sand-800 text-sm mb-3">The best affordable, home-style island food just a walk away.</p>
+                            <span class="text-xs font-bold text-tropical-600 bg-tropical-50 px-2 py-1 rounded">Eat</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-sand-100">
+                        <div class="h-40 overflow-hidden"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza" class="w-full h-full object-cover"></div>
+                        <div class="p-5">
+                            <h5 class="text-lg font-bold text-sand-900 mb-1">Kermit Siargao</h5>
+                            <p class="text-sand-800 text-sm mb-3">Legendary wood-fired pizza and great evening cocktails.</p>
+                            <span class="text-xs font-bold text-tropical-600 bg-tropical-50 px-2 py-1 rounded">Dine & Chill</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-sand-900 text-sand-100 py-16 border-t border-sand-800">
+        <div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center">
+            
+            <h2 class="text-3xl font-bold text-white mb-8">Ready for your Siargao trip?</h2>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <a href="https://wa.me/639171125592" target="_blank" class="bg-white text-sand-900 px-8 py-3 rounded-full font-bold hover:bg-tropical-50 transition-colors shadow-lg flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    WhatsApp
+                </a>
+                <a href="mailto:camanolohomestay@gmail.com" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition-colors flex items-center justify-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     Email Us
                 </a>
-                <button onclick="alert('WhatsApp integration coming soon!')" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-colors flex items-center justify-center">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    WhatsApp
-                </button>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-sand-900 text-sand-100 py-12 border-t border-sand-800">
-        <div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center">
-            
-            <!-- Precision Geometric SVG Logo for Footer (Auto-adjusts to white using currentColor) -->
-            <div class="text-white opacity-90 hover:opacity-100 transition-opacity mb-6">
-                <svg viewBox="0 0 350 100" xmlns="http://www.w3.org/2000/svg" class="h-12 md:h-16 w-auto">
+            <div class="text-white opacity-90 hover:opacity-100 transition-opacity mb-4">
+                <svg viewBox="0 0 350 100" xmlns="http://www.w3.org/2000/svg" class="h-10 md:h-12 w-auto">
                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M 42 50 A 12 12 0 1 0 42 66" stroke-width="4"/>
                         <circle cx="65" cy="58" r="12" stroke-width="4"/>
@@ -399,12 +537,16 @@
                 </svg>
             </div>
 
-            <p class="text-sm text-sand-400 mb-2">General Luna, Siargao Island, Surigao del Norte</p>
+            <p class="text-sm text-sand-400 mb-1">General Luna, Siargao Island, Surigao del Norte</p>
             <p class="text-sm text-sand-500">&copy; 2026 Camanolo Homestay. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Simple JS for Mobile Menu Toggle -->
+    <a href="#footer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 bg-tropical-800 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold shadow-2xl hover:bg-tropical-900 hover:-translate-y-1 transition-all flex items-center group">
+        <span class="mr-2">Book Now</span>
+        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+    </a>
+
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -413,7 +555,6 @@
             menu.classList.toggle('hidden');
         });
 
-        // Close menu when a link is clicked
         const menuLinks = menu.querySelectorAll('a');
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
