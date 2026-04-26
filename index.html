@@ -284,8 +284,8 @@
                         <h4 class="text-sm font-bold text-tropical-800 uppercase tracking-wider mb-8">Guest Notes</h4>
                         
                         <div class="grid sm:grid-cols-2 gap-6">
-                            <!-- Review 1 -->
-                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between">
+                            <!-- Review Card 1 -->
+                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between transition-opacity duration-500" id="review-card-1">
                                 <div>
                                     <div class="flex text-tropical-500 mb-4">
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -294,19 +294,19 @@
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                     </div>
-                                    <p class="text-sand-800 italic mb-6 leading-relaxed">"I needed a quiet place in the main area of General Luna. This place was absolutely the best. If I had known how great my stay would be, I would have booked it earlier for more nights."</p>
+                                    <p id="review-text-1" class="text-sand-800 italic mb-6 leading-relaxed">...</p>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-bold text-sand-900 uppercase tracking-wider">- Demi, Netherlands</p>
+                                    <p id="review-author-1" class="text-sm font-bold text-sand-900 uppercase tracking-wider">...</p>
                                     <p class="text-xs text-sand-500 mt-1 flex items-center">
                                         <span class="inline-block w-2 h-2 bg-[#003580] rounded-full mr-2"></span>
-                                        via Booking.com
+                                        via <span id="review-source-1" class="ml-1">Booking.com</span>
                                     </p>
                                 </div>
                             </div>
                             
-                            <!-- Review 2 -->
-                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between">
+                            <!-- Review Card 2 -->
+                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between transition-opacity duration-500" id="review-card-2">
                                 <div>
                                     <div class="flex text-tropical-500 mb-4">
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -315,13 +315,13 @@
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                     </div>
-                                    <p class="text-sand-800 italic mb-6 leading-relaxed">"Love staying at Camanolo, great location in GL, the rooms are well-thought of and beautifully designed. Kuya Jepoy was very helpful throughout!"</p>
+                                    <p id="review-text-2" class="text-sand-800 italic mb-6 leading-relaxed">...</p>
                                 </div>
                                 <div>
-                                    <p class="text-sm font-bold text-sand-900 uppercase tracking-wider">- Regil, Philippines</p>
+                                    <p id="review-author-2" class="text-sm font-bold text-sand-900 uppercase tracking-wider">...</p>
                                     <p class="text-xs text-sand-500 mt-1 flex items-center">
                                         <span class="inline-block w-2 h-2 bg-[#003580] rounded-full mr-2"></span>
-                                        via Booking.com
+                                        via <span id="review-source-2" class="ml-1">Booking.com</span>
                                     </p>
                                 </div>
                             </div>
@@ -673,7 +673,9 @@
         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
     </a>
 
+    <!-- Application Logic -->
     <script>
+        // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
@@ -686,6 +688,80 @@
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
+        });
+
+        // Dynamic Reviews Logic
+        const guestReviews = [
+            {
+                text: `"I love the room itself, the quiet space and the hosts. They are all accommodating. They even helped us in planning our DIY trip in the island."`,
+                author: "- Bucad, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"Its the best stay in siargao so far. It feels like home as Filipina living in the province. The ambiance. This is like low key “payag” yet luxurious vibes living in siargao"`,
+                author: "- Angelica, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"Home away from home. Camanolo's great location and amenities made our vacation worth it. The staff and the host were very friendly and helpful. The homestay looks more like a resort. Overall, Highly recommended! ❤️"`,
+                author: "- Deonne, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"So comfortable, cozy, and convenient to other beaches and restaurants."`,
+                author: "- Gamaine, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"What I liked was how the staff responded to guests and how they catered and provided our needs when needed."`,
+                author: "- Tamang, United States",
+                source: "Booking.com"
+            },
+            {
+                text: `"The location was at the center of the town, so access to everything is easy. Also, the host was very accommodating, and catered all our needs from the tours, transfer, etc.."`,
+                author: "- Jairell, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"Native feel to lodging, staff very helpful. Great location, wifi awesome. Owners very attentive to your needs."`,
+                author: "- Gary, United States",
+                source: "Booking.com"
+            },
+            {
+                text: `"Very nice stay, very large bathroom, powerful AC conveniently located just off main road"`,
+                author: "- Elise, Canada",
+                source: "Booking.com"
+            },
+            {
+                text: `"The location was great, the Homestay very clean and the staff was great and very accommodating!"`,
+                author: "- Shirley, Germany",
+                source: "Booking.com"
+            },
+            {
+                text: `"The place was very nice and comfortable! It was very Bahay Kubo vibes if you're into that. Kuya was super welcoming and helpful and was able to answer any questions I had. The location was amazing, so close to popular restaurants and clubs which were literally 2 mins away by walking."`,
+                author: "- Vincent, Canada",
+                source: "Booking.com"
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pick two distinct random indices
+            let idx1 = Math.floor(Math.random() * guestReviews.length);
+            let idx2 = Math.floor(Math.random() * guestReviews.length);
+            
+            while (idx1 === idx2) {
+                idx2 = Math.floor(Math.random() * guestReviews.length);
+            }
+
+            // Populate Card 1
+            document.getElementById('review-text-1').textContent = guestReviews[idx1].text;
+            document.getElementById('review-author-1').textContent = guestReviews[idx1].author;
+            document.getElementById('review-source-1').textContent = guestReviews[idx1].source;
+
+            // Populate Card 2
+            document.getElementById('review-text-2').textContent = guestReviews[idx2].text;
+            document.getElementById('review-author-2').textContent = guestReviews[idx2].author;
+            document.getElementById('review-source-2').textContent = guestReviews[idx2].source;
         });
     </script>
 </body>
