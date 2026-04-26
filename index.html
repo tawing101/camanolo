@@ -55,9 +55,21 @@
             background-size: cover;
             background-position: center;
         }
+        
+        /* Custom scrollbar for the modal */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #d7c8b0;
+            border-radius: 10px;
+        }
     </style>
 </head>
-<body class="font-sans text-sand-800 bg-sand-50 antialiased selection:bg-tropical-500 selection:text-white">
+<body class="font-sans text-sand-800 bg-sand-50 antialiased selection:bg-tropical-500 selection:text-white relative">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-sand-50/95 backdrop-blur-md border-b border-sand-100 shadow-sm transition-all duration-300">
@@ -280,12 +292,14 @@
                     </div>
 
                     <!-- Right Column: Hand-picked Reviews -->
-                    <div class="lg:w-2/3">
-                        <h4 class="text-sm font-bold text-tropical-800 uppercase tracking-wider mb-8">Guest Notes</h4>
+                    <div class="lg:w-2/3 flex flex-col">
+                        <div class="flex justify-between items-center mb-8">
+                            <h4 class="text-sm font-bold text-tropical-800 uppercase tracking-wider">Guest Notes</h4>
+                        </div>
                         
-                        <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="grid sm:grid-cols-2 gap-6 flex-grow">
                             <!-- Review Card 1 -->
-                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between transition-opacity duration-500" id="review-card-1">
+                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between transition-opacity duration-500 h-full" id="review-card-1">
                                 <div>
                                     <div class="flex text-tropical-500 mb-4">
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -296,7 +310,7 @@
                                     </div>
                                     <p id="review-text-1" class="text-sand-800 italic mb-6 leading-relaxed">...</p>
                                 </div>
-                                <div>
+                                <div class="mt-4">
                                     <p id="review-author-1" class="text-sm font-bold text-sand-900 uppercase tracking-wider">...</p>
                                     <p class="text-xs text-sand-500 mt-1 flex items-center">
                                         <span class="inline-block w-2 h-2 bg-[#003580] rounded-full mr-2"></span>
@@ -306,7 +320,7 @@
                             </div>
                             
                             <!-- Review Card 2 -->
-                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between transition-opacity duration-500" id="review-card-2">
+                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between transition-opacity duration-500 h-full" id="review-card-2">
                                 <div>
                                     <div class="flex text-tropical-500 mb-4">
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -317,7 +331,7 @@
                                     </div>
                                     <p id="review-text-2" class="text-sand-800 italic mb-6 leading-relaxed">...</p>
                                 </div>
-                                <div>
+                                <div class="mt-4">
                                     <p id="review-author-2" class="text-sm font-bold text-sand-900 uppercase tracking-wider">...</p>
                                     <p class="text-xs text-sand-500 mt-1 flex items-center">
                                         <span class="inline-block w-2 h-2 bg-[#003580] rounded-full mr-2"></span>
@@ -325,6 +339,14 @@
                                     </p>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- Read All Reviews Button -->
+                        <div class="mt-8 flex justify-center lg:justify-start">
+                            <button id="open-reviews-btn" class="group inline-flex items-center text-sm font-semibold text-tropical-800 hover:text-tropical-600 transition-colors">
+                                Read all guest notes
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
                         </div>
                     </div>
                     
@@ -673,6 +695,26 @@
         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
     </a>
 
+    <!-- All Reviews Modal -->
+    <div id="all-reviews-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-sand-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-sand-50 w-full max-w-2xl max-h-[85vh] rounded-3xl shadow-2xl flex flex-col transform scale-95 transition-transform duration-300" id="modal-content">
+            
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-6 border-b border-sand-200">
+                <h3 class="text-xl font-bold text-sand-900 font-serif">Notes from our Guests</h3>
+                <button id="close-reviews-btn" class="text-sand-500 hover:text-tropical-800 transition-colors p-2 rounded-full hover:bg-sand-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Modal Body (Scrollable) -->
+            <div id="modal-reviews-list" class="p-6 overflow-y-auto custom-scrollbar flex-grow space-y-2">
+                <!-- Reviews injected via JS -->
+            </div>
+            
+        </div>
+    </div>
+
     <!-- Application Logic -->
     <script>
         // Mobile Menu Toggle
@@ -745,7 +787,7 @@
         ];
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Pick two distinct random indices
+            // Pick two distinct random indices for the featured cards
             let idx1 = Math.floor(Math.random() * guestReviews.length);
             let idx2 = Math.floor(Math.random() * guestReviews.length);
             
@@ -762,6 +804,64 @@
             document.getElementById('review-text-2').textContent = guestReviews[idx2].text;
             document.getElementById('review-author-2').textContent = guestReviews[idx2].author;
             document.getElementById('review-source-2').textContent = guestReviews[idx2].source;
+            
+            // Populate Modal with ALL reviews
+            const modalList = document.getElementById('modal-reviews-list');
+            guestReviews.forEach(review => {
+                const reviewEl = document.createElement('div');
+                reviewEl.className = 'border-b border-sand-200 py-5 last:border-0';
+                reviewEl.innerHTML = `
+                    <div class="flex text-tropical-500 mb-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-sand-800 italic mb-3 leading-relaxed text-sm md:text-base">${review.text}</p>
+                    <div class="flex items-center text-xs md:text-sm">
+                        <span class="font-bold text-sand-900 uppercase tracking-wider">${review.author}</span>
+                        <span class="text-sand-400 mx-2">|</span>
+                        <span class="text-sand-500 flex items-center">
+                            <span class="inline-block w-1.5 h-1.5 bg-[#003580] rounded-full mr-1.5"></span>
+                            via ${review.source}
+                        </span>
+                    </div>
+                `;
+                modalList.appendChild(reviewEl);
+            });
+            
+            // Modal Interaction Logic
+            const modal = document.getElementById('all-reviews-modal');
+            const modalContent = document.getElementById('modal-content');
+            const openBtn = document.getElementById('open-reviews-btn');
+            const closeBtn = document.getElementById('close-reviews-btn');
+
+            const openModal = () => {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modal.classList.add('opacity-100', 'pointer-events-auto');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            };
+
+            const closeModal = () => {
+                modal.classList.remove('opacity-100', 'pointer-events-auto');
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            };
+
+            openBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            
+            // Close when clicking outside the modal content
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
         });
     </script>
 </body>
