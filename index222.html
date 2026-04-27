@@ -21,17 +21,28 @@
                     },
                     colors: {
                         tropical: {
-                            50: '#f4f7f4',
-                            100: '#e3ebe3',
-                            500: '#8ba888',
-                            800: '#4a6b47',
-                            900: '#3a5338',
+                            50: '#f2f6f3',
+                            100: '#e0ece2',
+                            200: '#c2d8c5',
+                            300: '#99bc9f',
+                            400: '#759d7d',
+                            500: '#578060',
+                            600: '#41654a',
+                            700: '#35513d',
+                            800: '#2b4131',
+                            900: '#243629',
                         },
                         sand: {
-                            50: '#fdfbf7',
-                            100: '#f4f1ea',
-                            800: '#5c574f',
-                            900: '#4a453e',
+                            50: '#fbfaf8',
+                            100: '#f5f2eb',
+                            200: '#e8e0d1',
+                            300: '#d7c8b0',
+                            400: '#c2ab8a',
+                            500: '#ad8f66',
+                            600: '#93734e',
+                            700: '#7a5d40',
+                            800: '#644e37',
+                            900: '#51402f',
                         }
                     }
                 }
@@ -40,16 +51,28 @@
     </script>
     <style>
         .hero-bg {
-            background-image: linear-gradient(rgba(58, 83, 56, 0.45), rgba(74, 69, 62, 0.65)), url('images/507280845.jpg');
+            background-image: linear-gradient(rgba(36, 54, 41, 0.55), rgba(81, 64, 47, 0.75)), url('images/michael-louie-Zw5aEvl5QjA-unsplash (1).jpg');
             background-size: cover;
             background-position: center;
         }
+        
+        /* Custom scrollbar for the modal */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #d7c8b0;
+            border-radius: 10px;
+        }
     </style>
 </head>
-<body class="font-sans text-sand-800 bg-sand-50 antialiased selection:bg-tropical-500 selection:text-white">
+<body class="font-sans text-sand-800 bg-sand-50 antialiased selection:bg-tropical-500 selection:text-white relative">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-sand-100 shadow-sm transition-all duration-300">
+    <nav class="fixed w-full z-50 bg-sand-50/95 backdrop-blur-md border-b border-sand-100 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
@@ -88,8 +111,8 @@
                             Our Story
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="absolute left-0 mt-0 w-48 bg-white border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
-                            <a href="#reviews" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors">Reviews & Awards</a>
+                        <div class="absolute left-0 mt-0 w-48 bg-sand-50 border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+                            <a href="#reviews" class="block px-4 py-3 text-sm text-sand-800 hover:bg-sand-100 hover:text-tropical-800 transition-colors">Reviews & Awards</a>
                         </div>
                     </div>
 
@@ -98,9 +121,9 @@
                             The Nipa Villas
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="absolute left-0 mt-0 w-56 bg-white border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
-                            <a href="#queen-kubo" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors">Queen Bahay Kubo</a>
-                            <a href="#aframe-villa" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors border-t border-sand-50">The A-Frame</a>
+                        <div class="absolute left-0 mt-0 w-56 bg-sand-50 border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+                            <a href="#queen-kubo" class="block px-4 py-3 text-sm text-sand-800 hover:bg-sand-100 hover:text-tropical-800 transition-colors">Queen Bahay Kubo</a>
+                            <a href="#aframe-villa" class="block px-4 py-3 text-sm text-sand-800 hover:bg-sand-100 hover:text-tropical-800 transition-colors border-t border-sand-100">The A-Frame</a>
                         </div>
                     </div>
 
@@ -109,8 +132,8 @@
                             The Residence
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="absolute left-0 mt-0 w-48 bg-white border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
-                            <a href="#residence-features" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors">Sanctuary Features</a>
+                        <div class="absolute left-0 mt-0 w-48 bg-sand-50 border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+                            <a href="#residence-features" class="block px-4 py-3 text-sm text-sand-800 hover:bg-sand-100 hover:text-tropical-800 transition-colors">Sanctuary Features</a>
                         </div>
                     </div>
 
@@ -119,8 +142,8 @@
                             Camanolo Experience
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="absolute right-0 mt-0 w-48 bg-white border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
-                            <a href="#basic-details" class="block px-4 py-3 text-sm text-sand-800 hover:bg-tropical-50 hover:text-tropical-800 transition-colors">Location & Rules</a>
+                        <div class="absolute right-0 mt-0 w-48 bg-sand-50 border border-sand-100 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
+                            <a href="#basic-details" class="block px-4 py-3 text-sm text-sand-800 hover:bg-sand-100 hover:text-tropical-800 transition-colors">Location & Rules</a>
                         </div>
                     </div>
                 </div>
@@ -135,31 +158,31 @@
             </div>
         </div>
         
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-sand-100 max-h-[80vh] overflow-y-auto">
+        <div id="mobile-menu" class="hidden md:hidden bg-sand-50 border-t border-sand-100 max-h-[80vh] overflow-y-auto">
             <div class="px-4 pt-4 pb-6 space-y-6 shadow-lg">
                 <div>
                     <h3 class="px-3 text-xs font-bold text-sand-400 uppercase tracking-wider mb-2">Our Story</h3>
                     <div class="space-y-1">
-                        <a href="#reviews" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Reviews & Awards</a>
+                        <a href="#reviews" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-100 rounded-md">Reviews & Awards</a>
                     </div>
                 </div>
                 <div>
                     <h3 class="px-3 text-xs font-bold text-sand-400 uppercase tracking-wider mb-2">The Nipa Villas</h3>
                     <div class="space-y-1">
-                        <a href="#queen-kubo" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Queen Bahay Kubo</a>
-                        <a href="#aframe-villa" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">The A-Frame</a>
+                        <a href="#queen-kubo" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-100 rounded-md">Queen Bahay Kubo</a>
+                        <a href="#aframe-villa" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-100 rounded-md">The A-Frame</a>
                     </div>
                 </div>
                 <div>
                     <h3 class="px-3 text-xs font-bold text-sand-400 uppercase tracking-wider mb-2">The Residence</h3>
                     <div class="space-y-1">
-                        <a href="#residence-features" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Sanctuary Features</a>
+                        <a href="#residence-features" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-100 rounded-md">Sanctuary Features</a>
                     </div>
                 </div>
                 <div>
                     <h3 class="px-3 text-xs font-bold text-sand-400 uppercase tracking-wider mb-2">Camanolo Experience</h3>
                     <div class="space-y-1">
-                        <a href="#basic-details" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-50 rounded-md">Location & Rules</a>
+                        <a href="#basic-details" class="block px-4 py-2 text-base font-medium text-sand-800 hover:text-tropical-500 hover:bg-sand-100 rounded-md">Location & Rules</a>
                     </div>
                 </div>
             </div>
@@ -169,16 +192,16 @@
     <!-- HERO SECTION -->
     <section id="home" class="relative h-screen flex items-center justify-center hero-bg">
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-            <span class="inline-block py-1 px-3 rounded-full bg-white/20 text-white text-sm tracking-wider font-semibold uppercase mb-6 backdrop-blur-sm border border-white/30">General Luna, Siargao</span>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+            <span class="inline-block py-1 px-3 rounded-full bg-sand-50/20 text-sand-50 text-sm tracking-wider font-semibold uppercase mb-6 backdrop-blur-sm border border-sand-50/30">General Luna, Siargao</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-sand-50 mb-6 leading-tight drop-shadow-lg">
                 A Home That Became <br/> a Place to Stay
             </h1>
-            <p class="text-lg md:text-2xl text-sand-50 mb-10 font-light drop-shadow-md max-w-3xl mx-auto leading-relaxed">
+            <p class="text-lg md:text-2xl text-sand-100 mb-10 font-light drop-shadow-md max-w-3xl mx-auto leading-relaxed">
                 A family home in General Luna—unhurried, rooted, where the locals are neighbors and the island wraps around you.
             </p>
         </div>
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#welcome" class="text-white/70 hover:text-white">
+            <a href="#welcome" class="text-sand-100/70 hover:text-sand-50">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </a>
         </div>
@@ -194,13 +217,13 @@
     </section>
 
     <!-- SECTION 1: OUR STORY -->
-    <section id="our-story" class="py-16 bg-white scroll-mt-20">
+    <section id="our-story" class="py-16 bg-sand-100 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Story Content Split Layout -->
             <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-24">
                 <div class="lg:w-1/2 text-left">
-                    <h2 class="text-tropical-800 font-semibold tracking-wider uppercase text-sm mb-4">Our Story</h2>
+                    <h2 class="text-tropical-800 font-extrabold tracking-wider uppercase text-2xl md:text-3xl mb-4">Our Story</h2>
                     <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-sand-900 mb-8 leading-tight">
                         We came for the waves.
                     </h3>
@@ -225,12 +248,64 @@
                 </div>
                 
                 <div class="lg:w-1/2 w-full relative">
-                    <div class="rounded-3xl overflow-hidden shadow-xl border border-sand-100 relative z-10 aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
-                        <img src="images/507280845.jpg" alt="The Camanolo Story" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="rounded-3xl overflow-hidden shadow-xl border border-sand-200 relative z-10 aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
+                        <img src="images/Pio_Ingrid (1).jpg" alt="The Camanolo Story" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                     </div>
                     <!-- Decorative background offset -->
                     <div class="absolute -bottom-6 -right-6 w-full h-full bg-tropical-50 rounded-3xl -z-10 border border-tropical-100 hidden sm:block"></div>
-                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-sand-100 rounded-full -z-10 opacity-50 blur-2xl"></div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-sand-200 rounded-full -z-10 opacity-50 blur-2xl"></div>
+                </div>
+            </div>
+
+            <!-- Visual Mosaic Gallery -->
+            <div class="mb-24">
+                <div class="flex items-center justify-between mb-8">
+                    <h4 class="text-2xl md:text-3xl font-bold text-sand-900 tracking-tight">Life at Camanolo</h4>
+                    <div class="h-[1px] bg-sand-300 flex-grow ml-8 hidden sm:block"></div>
+                </div>
+                <!-- Masonry Layout using CSS columns -->
+                <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+                    
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/OLD_CMNL.jpg" alt="Vintage Camanolo" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/adrien-brun-DBv_pu5hYXY-unsplash.jpg" alt="Island landscape" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/DAU_Guest.jpg" alt="Guest at Camanolo" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/alejandro-luengo-4eCtaip9Zzo-unsplash.jpg" alt="Surfing Siargao" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/Dau_ranveer.jpg" alt="Guest smiles" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/darwin-trinidad-olcKYqEXwpg-unsplash.jpg" alt="Island vibes" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/adrien-brun-sSpjhyLM8dQ-unsplash.jpg" alt="Tropical scenes" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/alejandro-luengo-GRXkNlhbY9c-unsplash.jpg" alt="Siargao waves" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/alejandro-luengo-jMCOul3CK9U-unsplash.jpg" alt="Island lifestyle" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
+                        <img src="images/photo-1565565915331-293fd8113954.jpg" alt="Siargao details" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    
                 </div>
             </div>
 
@@ -248,7 +323,7 @@
                         
                         <!-- Booking.com style rating badge -->
                         <div class="flex items-center gap-5 mb-10">
-                            <div class="bg-tropical-800 text-white font-bold text-3xl h-20 w-20 flex items-center justify-center rounded-[1rem] shadow-lg">9.1</div>
+                            <div class="bg-tropical-800 text-sand-50 font-bold text-3xl h-20 w-20 flex items-center justify-center rounded-[1rem] shadow-lg">9.1</div>
                             <div>
                                 <div class="text-2xl font-bold text-sand-900 mb-1">Superb</div>
                                 <div class="text-sm text-sand-600 font-medium">Based on 340+ reviews</div>
@@ -257,11 +332,11 @@
 
                         <!-- Accomplishment Pills -->
                         <div class="space-y-4">
-                            <div class="bg-white border border-tropical-100 px-6 py-4 rounded-2xl flex items-center shadow-sm">
+                            <div class="bg-sand-50 border border-tropical-100 px-6 py-4 rounded-2xl flex items-center shadow-sm">
                                 <svg class="w-6 h-6 text-tropical-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                                 <span class="font-bold text-sand-900 text-base">9.5 Staff & Host Score</span>
                             </div>
-                            <div class="bg-white border border-tropical-100 px-6 py-4 rounded-2xl flex items-center shadow-sm">
+                            <div class="bg-sand-50 border border-tropical-100 px-6 py-4 rounded-2xl flex items-center shadow-sm">
                                 <svg class="w-6 h-6 text-tropical-600 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 <span class="font-bold text-sand-900 text-base">9.7 Location Rating</span>
                             </div>
@@ -269,12 +344,14 @@
                     </div>
 
                     <!-- Right Column: Hand-picked Reviews -->
-                    <div class="lg:w-2/3">
-                        <h4 class="text-sm font-bold text-tropical-800 uppercase tracking-wider mb-8">Guest Notes</h4>
+                    <div class="lg:w-2/3 flex flex-col">
+                        <div class="flex justify-between items-center mb-8">
+                            <h4 class="text-sm font-bold text-tropical-800 uppercase tracking-wider">Guest Notes</h4>
+                        </div>
                         
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <!-- Review 1 -->
-                            <div class="bg-white p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between">
+                        <div class="grid sm:grid-cols-2 gap-6 flex-grow">
+                            <!-- Review Card 1 -->
+                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between transition-opacity duration-500 h-full" id="review-card-1">
                                 <div>
                                     <div class="flex text-tropical-500 mb-4">
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -283,19 +360,19 @@
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                     </div>
-                                    <p class="text-sand-800 italic mb-6 leading-relaxed">"I needed a quiet place in the main area of General Luna. This place was absolutely the best. If I had known how great my stay would be, I would have booked it earlier for more nights."</p>
+                                    <p id="review-text-1" class="text-sand-800 italic mb-6 leading-relaxed">...</p>
                                 </div>
-                                <div>
-                                    <p class="text-sm font-bold text-sand-900 uppercase tracking-wider">- Demi, Netherlands</p>
+                                <div class="mt-4">
+                                    <p id="review-author-1" class="text-sm font-bold text-sand-900 uppercase tracking-wider">...</p>
                                     <p class="text-xs text-sand-500 mt-1 flex items-center">
                                         <span class="inline-block w-2 h-2 bg-[#003580] rounded-full mr-2"></span>
-                                        via Booking.com
+                                        via <span id="review-source-1" class="ml-1">Booking.com</span>
                                     </p>
                                 </div>
                             </div>
                             
-                            <!-- Review 2 -->
-                            <div class="bg-white p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between">
+                            <!-- Review Card 2 -->
+                            <div class="bg-sand-50 p-8 rounded-3xl border border-sand-100 shadow-sm relative flex flex-col justify-between transition-opacity duration-500 h-full" id="review-card-2">
                                 <div>
                                     <div class="flex text-tropical-500 mb-4">
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -304,16 +381,24 @@
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                     </div>
-                                    <p class="text-sand-800 italic mb-6 leading-relaxed">"Love staying at Camanolo, great location in GL, the rooms are well-thought of and beautifully designed. Kuya Jepoy was very helpful throughout!"</p>
+                                    <p id="review-text-2" class="text-sand-800 italic mb-6 leading-relaxed">...</p>
                                 </div>
-                                <div>
-                                    <p class="text-sm font-bold text-sand-900 uppercase tracking-wider">- Regil, Philippines</p>
+                                <div class="mt-4">
+                                    <p id="review-author-2" class="text-sm font-bold text-sand-900 uppercase tracking-wider">...</p>
                                     <p class="text-xs text-sand-500 mt-1 flex items-center">
                                         <span class="inline-block w-2 h-2 bg-[#003580] rounded-full mr-2"></span>
-                                        via Booking.com
+                                        via <span id="review-source-2" class="ml-1">Booking.com</span>
                                     </p>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- Read All Reviews Button -->
+                        <div class="mt-8 flex justify-center lg:justify-start">
+                            <button id="open-reviews-btn" class="group inline-flex items-center text-sm font-semibold text-tropical-800 hover:text-tropical-600 transition-colors">
+                                Read all guest notes
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
                         </div>
                     </div>
                     
@@ -345,7 +430,7 @@
                         <p class="text-sand-800 mb-10 leading-relaxed">The kind of space you come back to after a full day on the island and immediately feel at ease.</p>
 
                         <!-- Amenities Pill box -->
-                        <div class="bg-[#EAECE3] rounded-full px-6 py-4 text-sm text-tropical-900 italic self-start mb-8 lg:mb-0 shadow-sm">
+                        <div class="bg-sand-200/50 rounded-full px-6 py-4 text-sm text-tropical-900 italic self-start mb-8 lg:mb-0 shadow-sm border border-sand-200">
                             Amenities: Queen bed &middot; Air conditioning &middot; Large bathroom &middot; Hot shower &middot; Private balcony &middot; Garden view
                         </div>
                     </div>
@@ -377,7 +462,7 @@
                         <p class="text-sand-800 mb-10 leading-relaxed">The bathroom is generous — walk-in closet, room for three to get ready without stepping on each other. It's the kind of place where families make memories and friends stay up too late.</p>
 
                         <!-- Amenities Pill box -->
-                        <div class="bg-[#EAECE3] rounded-[2rem] px-6 py-4 text-sm text-tropical-900 italic self-start mb-8 lg:mb-0 shadow-sm">
+                        <div class="bg-sand-200/50 rounded-[2rem] px-6 py-4 text-sm text-tropical-900 italic self-start mb-8 lg:mb-0 shadow-sm border border-sand-200">
                             Amenities: Queen bed + single bed (ground floor) &middot; Queen bed (loft) &middot; 3-pax bathroom &middot; Walk-in closet &middot; Air conditioning &middot; Hot shower
                         </div>
                     </div>
@@ -398,7 +483,7 @@
     </section>
 
     <!-- SECTION 3: THE RESIDENCE (MINIMALIST LAYOUT) -->
-    <section id="residence" class="py-24 bg-sand-50 border-t border-sand-100 scroll-mt-20">
+    <section id="residence" class="py-24 bg-sand-100 border-t border-sand-200 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 border-b border-sand-300 pb-4">
                 <h3 class="text-4xl md:text-5xl font-serif text-sand-900 tracking-tight">The Camanolo Residence</h3>
@@ -452,7 +537,7 @@
     </section>
 
     <!-- SECTION 4: THE SOUL OF SIARGAO -->
-    <section id="camanolo-experience" class="py-24 bg-white border-t border-sand-100 scroll-mt-20 relative overflow-hidden">
+    <section id="camanolo-experience" class="py-24 bg-sand-50 border-t border-sand-100 scroll-mt-20 relative overflow-hidden">
         
         <!-- Subtle leaf decor overlay conceptually like the mockup -->
         <div class="absolute top-0 left-0 w-48 h-full bg-[url('https://images.unsplash.com/photo-1541814674753-2947a1ea61b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80')] opacity-5 bg-repeat-y"></div>
@@ -470,7 +555,7 @@
             <div id="basic-details" class="scroll-mt-24">
                 
                 <!-- Location Split -->
-                <div class="flex flex-col lg:flex-row items-center gap-16 mb-20 bg-sand-50 p-8 md:p-12 rounded-3xl border border-sand-100">
+                <div class="flex flex-col lg:flex-row items-center gap-16 mb-20 bg-sand-100 p-8 md:p-12 rounded-3xl border border-sand-200">
                     <div class="lg:w-1/2 space-y-6">
                         <h4 class="text-2xl font-bold text-sand-900 mb-6">Strategic Location</h4>
                         <div class="space-y-8">
@@ -501,9 +586,9 @@
                         </div>
                     </div>
                     <div class="lg:w-1/2 w-full">
-                        <div class="bg-sand-100 rounded-2xl overflow-hidden shadow-sm h-[350px] flex items-center justify-center relative border border-sand-200">
+                        <div class="bg-sand-200 rounded-2xl overflow-hidden shadow-sm h-[350px] flex items-center justify-center relative border border-sand-300">
                             <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Siargao Map Area" class="absolute inset-0 w-full h-full object-cover opacity-60" onerror="this.style.display='none'">
-                            <div class="relative z-10 bg-white/90 backdrop-blur-sm p-6 rounded-xl text-center shadow-xl border border-sand-200">
+                            <div class="relative z-10 bg-sand-50/90 backdrop-blur-sm p-6 rounded-xl text-center shadow-xl border border-sand-200">
                                 <svg class="w-10 h-10 text-tropical-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
                                 <h4 class="font-bold text-sand-900">General Luna</h4>
                                 <p class="text-sm text-sand-800 mt-1">Right off Dapa-GL Road</p>
@@ -513,7 +598,7 @@
                 </div>
 
                 <!-- House Rules Add-on -->
-                <div class="bg-sand-50 p-8 md:p-12 rounded-3xl border border-sand-100 mb-20">
+                <div class="bg-sand-100 p-8 md:p-12 rounded-3xl border border-sand-200 mb-20">
                     <h4 class="text-2xl font-bold text-sand-900 mb-6">Homestay Guidelines</h4>
                     <div class="grid md:grid-cols-2 gap-x-12 gap-y-4">
                         <div class="flex items-start">
@@ -550,28 +635,28 @@
                 <!-- Neighborhood Guide -->
                 <h4 class="text-xl font-bold text-sand-900 mb-8 border-b border-sand-200 pb-2 text-center md:text-left">Curated Neighborhood</h4>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-sand-100">
-                        <div class="h-40 overflow-hidden"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cafe vibe" class="w-full h-full object-cover"></div>
+                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm border border-sand-100">
+                        <div class="h-40 overflow-hidden"><img src="images/huni.jpg" alt="Huni Siargao feast" class="w-full h-full object-cover"></div>
                         <div class="p-5">
                             <h5 class="text-lg font-bold text-sand-900 mb-1">Huni Siargao</h5>
                             <p class="text-sand-800 text-sm mb-3">Slow food and honest flavors in a deep tropical setting.</p>
-                            <span class="text-xs font-bold text-tropical-600 bg-tropical-50 px-2 py-1 rounded">Dine & Chill</span>
+                            <span class="text-xs font-bold text-tropical-700 bg-tropical-100 px-2 py-1 rounded">Dine & Chill</span>
                         </div>
                     </div>
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-sand-100">
+                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm border border-sand-100">
                         <div class="h-40 overflow-hidden"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Restaurant vibe" class="w-full h-full object-cover"></div>
                         <div class="p-5">
                             <h5 class="text-lg font-bold text-sand-900 mb-1">Kurvada</h5>
                             <p class="text-sand-800 text-sm mb-3">The best affordable, home-style island food just a walk away.</p>
-                            <span class="text-xs font-bold text-tropical-600 bg-tropical-50 px-2 py-1 rounded">Eat</span>
+                            <span class="text-xs font-bold text-tropical-700 bg-tropical-100 px-2 py-1 rounded">Eat</span>
                         </div>
                     </div>
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-sand-100">
+                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm border border-sand-100">
                         <div class="h-40 overflow-hidden"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza" class="w-full h-full object-cover"></div>
                         <div class="p-5">
                             <h5 class="text-lg font-bold text-sand-900 mb-1">Kermit Siargao</h5>
                             <p class="text-sand-800 text-sm mb-3">Legendary wood-fired pizza and great evening cocktails.</p>
-                            <span class="text-xs font-bold text-tropical-600 bg-tropical-50 px-2 py-1 rounded">Dine & Chill</span>
+                            <span class="text-xs font-bold text-tropical-700 bg-tropical-100 px-2 py-1 rounded">Dine & Chill</span>
                         </div>
                     </div>
                 </div>
@@ -592,9 +677,9 @@
     <footer id="footer" class="bg-sand-900 text-sand-100 py-16 border-t border-sand-800">
         <div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center">
             
-            <h2 class="text-3xl font-bold text-white mb-8">Ready for your Siargao trip?</h2>
+            <h2 class="text-3xl font-bold text-sand-50 mb-8">Ready for your Siargao trip?</h2>
             
-            <div class="text-white opacity-90 hover:opacity-100 transition-opacity mb-8">
+            <div class="text-sand-50 opacity-90 hover:opacity-100 transition-opacity mb-8">
                 <svg viewBox="0 0 350 100" xmlns="http://www.w3.org/2000/svg" class="h-16 md:h-20 w-auto">
                     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M 42 50 A 12 12 0 1 0 42 66" stroke-width="4"/>
@@ -625,7 +710,7 @@
             <!-- Social Media Icons -->
             <div class="flex items-center justify-center space-x-6 mb-8">
                 <!-- Instagram -->
-                <a href="#" target="_blank" rel="noopener noreferrer" class="text-sand-400 hover:text-white hover:-translate-y-1 transition-all" aria-label="Instagram">
+                <a href="https://www.instagram.com/camanolo.homestay/" target="_blank" rel="noopener noreferrer" class="text-sand-400 hover:text-sand-100 hover:-translate-y-1 transition-all" aria-label="Instagram">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                         <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -633,19 +718,19 @@
                     </svg>
                 </a>
                 <!-- Facebook -->
-                <a href="#" target="_blank" rel="noopener noreferrer" class="text-sand-400 hover:text-white hover:-translate-y-1 transition-all" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=100083278820028" target="_blank" rel="noopener noreferrer" class="text-sand-400 hover:text-sand-100 hover:-translate-y-1 transition-all" aria-label="Facebook">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                     </svg>
                 </a>
                 <!-- WhatsApp -->
-                <a href="https://wa.me/639171125592" target="_blank" rel="noopener noreferrer" class="text-sand-400 hover:text-white hover:-translate-y-1 transition-all" aria-label="WhatsApp">
+                <a href="https://wa.me/639167609639" target="_blank" rel="noopener noreferrer" class="text-sand-400 hover:text-sand-100 hover:-translate-y-1 transition-all" aria-label="WhatsApp">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                     </svg>
                 </a>
                 <!-- Email -->
-                <a href="mailto:camanolohomestay@gmail.com" target="_blank" rel="noopener noreferrer" class="text-sand-400 hover:text-white hover:-translate-y-1 transition-all" aria-label="Email Us">
+                <a href="mailto:camanolo.homestay@gmail.com" target="_blank" rel="noopener noreferrer" class="text-sand-400 hover:text-sand-100 hover:-translate-y-1 transition-all" aria-label="Email Us">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
@@ -657,12 +742,34 @@
         </div>
     </footer>
 
-    <a href="#footer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 bg-tropical-800 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold shadow-2xl hover:bg-tropical-900 hover:-translate-y-1 transition-all flex items-center group">
+    <a href="https://us2.cloudbeds.com/en/reservation/5SL0jj?currency=php" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 bg-tropical-800 text-sand-50 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold shadow-2xl hover:bg-tropical-900 hover:-translate-y-1 transition-all flex items-center group">
         <span class="mr-2">Book Now</span>
         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
     </a>
 
+    <!-- All Reviews Modal -->
+    <div id="all-reviews-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-sand-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-sand-50 w-full max-w-2xl max-h-[85vh] rounded-3xl shadow-2xl flex flex-col transform scale-95 transition-transform duration-300" id="modal-content">
+            
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-6 border-b border-sand-200">
+                <h3 class="text-xl font-bold text-sand-900 font-serif">Notes from our Guests</h3>
+                <button id="close-reviews-btn" class="text-sand-500 hover:text-tropical-800 transition-colors p-2 rounded-full hover:bg-sand-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Modal Body (Scrollable) -->
+            <div id="modal-reviews-list" class="p-6 overflow-y-auto custom-scrollbar flex-grow space-y-2">
+                <!-- Reviews injected via JS -->
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Application Logic -->
     <script>
+        // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
@@ -674,6 +781,138 @@
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
+            });
+        });
+
+        // Dynamic Reviews Logic
+        const guestReviews = [
+            {
+                text: `"I love the room itself, the quiet space and the hosts. They are all accommodating. They even helped us in planning our DIY trip in the island."`,
+                author: "- Bucad, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"Its the best stay in siargao so far. It feels like home as Filipina living in the province. The ambiance. This is like low key “payag” yet luxurious vibes living in siargao"`,
+                author: "- Angelica, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"Home away from home. Camanolo's great location and amenities made our vacation worth it. The staff and the host were very friendly and helpful. The homestay looks more like a resort. Overall, Highly recommended! ❤️"`,
+                author: "- Deonne, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"So comfortable, cozy, and convenient to other beaches and restaurants."`,
+                author: "- Gamaine, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"What I liked was how the staff responded to guests and how they catered and provided our needs when needed."`,
+                author: "- Tamang, United States",
+                source: "Booking.com"
+            },
+            {
+                text: `"The location was at the center of the town, so access to everything is easy. Also, the host was very accommodating, and catered all our needs from the tours, transfer, etc.."`,
+                author: "- Jairell, Philippines",
+                source: "Booking.com"
+            },
+            {
+                text: `"Native feel to lodging, staff very helpful. Great location, wifi awesome. Owners very attentive to your needs."`,
+                author: "- Gary, United States",
+                source: "Booking.com"
+            },
+            {
+                text: `"Very nice stay, very large bathroom, powerful AC conveniently located just off main road"`,
+                author: "- Elise, Canada",
+                source: "Booking.com"
+            },
+            {
+                text: `"The location was great, the Homestay very clean and the staff was great and very accommodating!"`,
+                author: "- Shirley, Germany",
+                source: "Booking.com"
+            },
+            {
+                text: `"The place was very nice and comfortable! It was very Bahay Kubo vibes if you're into that. Kuya was super welcoming and helpful and was able to answer any questions I had. The location was amazing, so close to popular restaurants and clubs which were literally 2 mins away by walking."`,
+                author: "- Vincent, Canada",
+                source: "Booking.com"
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pick two distinct random indices for the featured cards
+            let idx1 = Math.floor(Math.random() * guestReviews.length);
+            let idx2 = Math.floor(Math.random() * guestReviews.length);
+            
+            while (idx1 === idx2) {
+                idx2 = Math.floor(Math.random() * guestReviews.length);
+            }
+
+            // Populate Card 1
+            document.getElementById('review-text-1').textContent = guestReviews[idx1].text;
+            document.getElementById('review-author-1').textContent = guestReviews[idx1].author;
+            document.getElementById('review-source-1').textContent = guestReviews[idx1].source;
+
+            // Populate Card 2
+            document.getElementById('review-text-2').textContent = guestReviews[idx2].text;
+            document.getElementById('review-author-2').textContent = guestReviews[idx2].author;
+            document.getElementById('review-source-2').textContent = guestReviews[idx2].source;
+            
+            // Populate Modal with ALL reviews
+            const modalList = document.getElementById('modal-reviews-list');
+            guestReviews.forEach(review => {
+                const reviewEl = document.createElement('div');
+                reviewEl.className = 'border-b border-sand-200 py-5 last:border-0';
+                reviewEl.innerHTML = `
+                    <div class="flex text-tropical-500 mb-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-sand-800 italic mb-3 leading-relaxed text-sm md:text-base">${review.text}</p>
+                    <div class="flex items-center text-xs md:text-sm">
+                        <span class="font-bold text-sand-900 uppercase tracking-wider">${review.author}</span>
+                        <span class="text-sand-400 mx-2">|</span>
+                        <span class="text-sand-500 flex items-center">
+                            <span class="inline-block w-1.5 h-1.5 bg-[#003580] rounded-full mr-1.5"></span>
+                            via ${review.source}
+                        </span>
+                    </div>
+                `;
+                modalList.appendChild(reviewEl);
+            });
+            
+            // Modal Interaction Logic
+            const modal = document.getElementById('all-reviews-modal');
+            const modalContent = document.getElementById('modal-content');
+            const openBtn = document.getElementById('open-reviews-btn');
+            const closeBtn = document.getElementById('close-reviews-btn');
+
+            const openModal = () => {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modal.classList.add('opacity-100', 'pointer-events-auto');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            };
+
+            const closeModal = () => {
+                modal.classList.remove('opacity-100', 'pointer-events-auto');
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            };
+
+            openBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            
+            // Close when clicking outside the modal content
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
             });
         });
     </script>
