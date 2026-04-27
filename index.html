@@ -259,8 +259,8 @@
                 </div>
                 
                 <div class="lg:w-1/2 w-full relative">
-                    <div class="rounded-3xl overflow-hidden shadow-xl border border-sand-200 relative z-10 aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
-                        <img src="images/Pio_Ingrid (1).jpg" alt="The Camanolo Story" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="rounded-3xl overflow-hidden shadow-xl border border-sand-200 relative z-10 aspect-[4/5] sm:aspect-square lg:aspect-[4/5] group">
+                        <img src="images/Pio_Ingrid (1).jpg" alt="The Camanolo Story" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                     </div>
                     <!-- Decorative background offset -->
                     <div class="absolute -bottom-6 -right-6 w-full h-full bg-tropical-50 rounded-3xl -z-10 border border-tropical-100 hidden sm:block"></div>
@@ -348,14 +348,14 @@
 
                     <!-- Images -->
                     <div class="lg:col-span-7 grid grid-cols-2 gap-4 order-1 lg:order-2">
-                        <div class="col-span-2 rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[400px]">
-                            <img src="images/507282613.jpg" alt="Queen Bahay Kubo Exterior" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Queen+Kubo'">
+                        <div class="col-span-2 rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[400px] group">
+                            <img src="images/507282613.jpg" alt="Queen Bahay Kubo Exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Queen+Kubo'">
                         </div>
-                        <div class="rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[250px]">
-                            <img src="images/507282598.jpg" alt="Queen Kubo Interior" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Interior'">
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[250px] group">
+                            <img src="images/507282598.jpg" alt="Queen Kubo Interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Interior'">
                         </div>
-                        <div class="rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[250px]">
-                            <img src="images/507280630.jpg" alt="Queen Kubo Bathroom" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Bathroom'">
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[250px] group">
+                            <img src="images/507280630.jpg" alt="Queen Kubo Bathroom" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=Bathroom'">
                         </div>
                     </div>
                 </div>
@@ -380,11 +380,11 @@
 
                     <!-- Images -->
                     <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[450px] lg:h-[550px]">
-                            <img src="images/507280850.jpg" alt="The A-Frame Exterior" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=The+A-Frame'">
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[450px] lg:h-[550px] group">
+                            <img src="images/507280850.jpg" alt="The A-Frame Exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=The+A-Frame'">
                         </div>
-                        <div class="rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[450px] lg:h-[550px]">
-                            <img src="images/507280861.jpg" alt="The A-Frame Interior Loft" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Interior+Loft'">
+                        <div class="rounded-2xl overflow-hidden shadow-sm border border-sand-100 h-[450px] lg:h-[550px] group">
+                            <img src="images/507280861.jpg" alt="The A-Frame Interior Loft" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/800x600/e2e8f0/475569?text=Interior+Loft'">
                         </div>
                     </div>
                 </div>
@@ -643,24 +643,30 @@
                 <!-- Neighborhood Guide -->
                 <h4 class="text-xl font-bold text-sand-900 mb-8 border-b border-sand-200 pb-2 text-center md:text-left">Curated Neighborhood</h4>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm border border-sand-100">
-                        <div class="h-40 overflow-hidden"><img src="images/huni.jpg" alt="Huni Siargao feast" class="w-full h-full object-cover"></div>
+                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm border border-sand-100 group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="images/huni.jpg" alt="Huni Siargao feast" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
                         <div class="p-5">
                             <h5 class="text-lg font-bold text-sand-900 mb-1">Huni Siargao</h5>
                             <p class="text-sand-800 text-sm mb-3">Slow food and honest flavors in a deep tropical setting.</p>
                             <span class="text-xs font-bold text-tropical-700 bg-tropical-100 px-2 py-1 rounded">Dine & Chill</span>
                         </div>
                     </div>
-                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm border border-sand-100">
-                        <div class="h-40 overflow-hidden"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Restaurant vibe" class="w-full h-full object-cover"></div>
+                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm border border-sand-100 group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Restaurant vibe" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
                         <div class="p-5">
                             <h5 class="text-lg font-bold text-sand-900 mb-1">Kurvada</h5>
                             <p class="text-sand-800 text-sm mb-3">The best affordable, home-style island food just a walk away.</p>
                             <span class="text-xs font-bold text-tropical-700 bg-tropical-100 px-2 py-1 rounded">Eat</span>
                         </div>
                     </div>
-                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm border border-sand-100">
-                        <div class="h-40 overflow-hidden"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza" class="w-full h-full object-cover"></div>
+                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-sm border border-sand-100 group">
+                        <div class="h-40 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pizza" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
                         <div class="p-5">
                             <h5 class="text-lg font-bold text-sand-900 mb-1">Kermit Siargao</h5>
                             <p class="text-sand-800 text-sm mb-3">Legendary wood-fired pizza and great evening cocktails.</p>
